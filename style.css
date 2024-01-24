@@ -1,0 +1,389 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.cdnfonts.com/css/major-mono-display");
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	padding: 30px 0;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	gap: 40px;
+}
+
+nav ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #00fff0;
+	font-size: 20px;
+	position: relative;
+}
+
+nav ul li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255);
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.4s ease;
+}
+
+nav ul li a:hover::before {
+	width: 100%;
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+nav ul li a:not(:hover)::before {
+	width: 0;
+	transform-origin: bottom right;
+	transition: transform 0.4s ease, width 0.2s ease;
+}
+
+.logo {
+	font-size: 32px;
+	font-weight: 400;
+}
+
+span {
+	color: #00fff0;
+	font-family: "Major Mono Display", sans-serif;
+	font-weight: 600;
+}
+
+.landing-1 {
+	background-image: url("img/bg.png");
+	background-size: cover;
+	height: 100dvh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.landing-salam {
+	font-weight: normal;
+	color: #00fff0;
+}
+
+.landing-slogan {
+	font-family: "Major Mono Display", sans-serif;
+	background: linear-gradient(90deg, #fff -0.61%, #00fff0 99.95%);
+	background-clip: text;
+	font-size: 40px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.btn-shop {
+	border-radius: 5px;
+	border: none;
+	background-color: #00fff0;
+	box-shadow: 5px 5px black;
+	margin-top: 20px;
+	width: 160px;
+	height: 52px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	transform: scale(1);
+	transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+	scale: calc(1.1);
+	transition: all 0.3s ease;
+}
+
+.landing-text-desk {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.landing-text-mobile {
+  display: none;
+}
+
+.landing-text-desk p {
+	color: white;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	gap: 20px;
+	text-align: center;
+}
+
+#copyright {
+	color: white;
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: white;
+}
+
+.social a {
+	color: white;
+	text-decoration: none;
+}
+
+.social a:hover {
+	color: rgb(223, 223, 223);
+}
+
+#hamburger {
+	display: none;
+}
+
+#close {
+	display: none;
+}
+
+@media only screen and (max-width: 1230px) {
+	.landing-text-desk h3 {
+		font-size: 16px !important;
+	}
+
+	.landing-text-desk h1 {
+		font-size: 28px !important;
+	}
+
+	.landing-text-desk p {
+		font-size: 14px !important;
+	}
+}
+
+@media only screen and (max-width: 1158px) {
+	.landing-text-desk h3 {
+		font-size: 14px !important;
+	}
+
+	.landing-text-desk h1 {
+		font-size: 26px !important;
+	}
+
+	.landing-text-desk p {
+		font-size: 12px !important;
+	}
+}
+
+@media only screen and (max-width: 1070px) {
+	.landing-1 img {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.landing-1 img {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.landing-text-desk h3 {
+		font-size: 12px !important;
+	}
+
+	.landing-text-desk h1 {
+		font-size: 24px !important;
+	}
+
+	.landing-text-desk p {
+		font-size: 10px !important;
+	}
+
+	.landing-1 img {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	nav {
+		justify-content: space-between;
+		align-items: center;
+    padding: 10px 50px;
+		flex-wrap: wrap;
+	}
+
+  .landing-text-desk {
+    display: none;
+  }
+
+  .landing-text-mobile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    color: white;
+  }
+
+	.logo {
+		font-size: 20px;
+	}
+
+	.landing-1 {
+		background-image: url("img/bg-mobile.png");
+		background-size: cover;
+		flex-direction: column-reverse;
+    gap: 40px;
+	}
+
+	.landing-1 img {
+		width: 250px;
+	}
+
+	#menu {
+		position: absolute;
+		text-align: center;
+		background-color: rgb(0, 0, 0);
+		height: 100dvh;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	nav ul li {
+		width: 100%;
+	}
+
+	#hamburger {
+		display: block;
+		font-size: 50px;
+		cursor: pointer;
+	}
+
+	#close {
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+		right: 56px;
+	}
+
+	.btn-group {
+		display: flex;
+		justify-content: center;
+	}
+
+	.btn-shop {
+		border-radius: 5px;
+    height: 40px !important;
+		border: none;
+		background-color: #00fff0;
+		box-shadow: 5px 5px black;
+		margin-top: 20px;
+		width: 100%;
+		height: 60px !important; 
+		font-size: 15px;
+		font-weight: 600;
+		cursor: pointer;
+		transform: none;
+		transition: all 0.3s ease;
+	}
+
+	.btn-shop:hover {
+		scale: none;
+		transition: all 0.3s ease;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	footer {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 10px;
+		font-size: 10px;
+	}
+
+  .landing-1 {
+    gap: 10px;
+  }
+
+	.landing-text-mobile {
+    text-align: center;
+		margin: 20px 20px;
+    gap: 10px;
+	}
+
+	.landing-text-mobile h3 {
+		font-size: 10px !important;
+	}
+
+	.landing-text-mobile h1 {
+		font-size: 18px !important;
+	}
+
+	.landing-text-mobile p {
+		font-size: 8px !important;
+	}
+
+  .btn-shop {
+    height: 40px !important;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .landing-1 img {
+    width: 100px;
+  }
+
+	.landing-text-mobile h3 {
+		font-size: 7px !important;
+	}
+
+	.landing-text-mobile h1 {
+		font-size: 10px !important;
+	}
+
+	.landing-text-mobile p {
+		font-size: 6px !important;
+	}
+
+  .btn-shop {
+    height: 30px !important;
+  }
+}
