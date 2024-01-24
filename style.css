@@ -127,7 +127,7 @@ span {
 }
 
 .landing-text-mobile {
-  display: none;
+	display: none;
 }
 
 .landing-text-desk p {
@@ -173,6 +173,51 @@ footer {
 	display: none;
 }
 
+.bubble-1 {
+	position: absolute;
+	top: 20%;
+	right: 6%;
+	background-color: #f29a1a;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	filter: blur(5px);
+	animation: mengambang 4s infinite;
+}
+.bubble-2 {
+	position: absolute;
+	top: 30%;
+	bottom: 0;
+	right: 34%;
+	background-color: #f29a1a;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	filter: blur(5px);
+	animation: mengambang 4s infinite;
+}
+.bubble-3 {
+	position: absolute;
+	bottom: 10%;
+	right: 14%;
+	background-color: #f29a1a;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	filter: blur(5px);
+	animation: mengambang 4s infinite;
+}
+
+@keyframes mengambang {
+	0%,
+	100% {
+		transform: translateY(-20%);
+	}
+	50% {
+		transform: translateY(-5%);
+	}
+}
+
 @media only screen and (max-width: 1230px) {
 	.landing-text-desk h3 {
 		font-size: 16px !important;
@@ -207,6 +252,12 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 990px) {
+	.bubble-2 {
+		right: 30%;
+	}
+}
+
 @media only screen and (max-width: 950px) {
 	.landing-1 img {
 		width: 300px;
@@ -233,23 +284,27 @@ footer {
 
 @media only screen and (max-width: 768px) {
 	nav {
+		position: fixed;
+		z-index: 100px;
 		justify-content: space-between;
 		align-items: center;
-    padding: 10px 50px;
+		padding: 10px 50px;
 		flex-wrap: wrap;
 	}
 
-  .landing-text-desk {
-    display: none;
-  }
+	.landing-text-desk {
+		display: none;
+	}
 
-  .landing-text-mobile {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    color: white;
-  }
+	.landing-text-mobile {
+		position: relative;
+		z-index: 10px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+		color: white;
+	}
 
 	.logo {
 		font-size: 20px;
@@ -259,11 +314,33 @@ footer {
 		background-image: url("img/bg-mobile.png");
 		background-size: cover;
 		flex-direction: column-reverse;
-    gap: 40px;
+		gap: 40px;
 	}
 
 	.landing-1 img {
+		position: relative;
+		z-index: 10px;
 		width: 250px;
+	}
+
+	.bubble-1 {
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		filter: blur(20px);
+		z-index: 1px;
+	}
+	.bubble-2 {
+		position: absolute;
+		z-index: 1px;
+		filter: blur(20px);
+		left: 20%;
+	}
+	.bubble-3 {
+		position: absolute;
+		bottom: 20%;
+		filter: blur(20px);
+		z-index: 1px;
 	}
 
 	#menu {
@@ -295,8 +372,8 @@ footer {
 		display: block;
 		position: absolute;
 		top: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
+		font-family: "Courier New", Courier, monospace;
+		font-size: 50px;
 		right: 56px;
 	}
 
@@ -307,13 +384,13 @@ footer {
 
 	.btn-shop {
 		border-radius: 5px;
-    height: 40px !important;
+		height: 40px !important;
 		border: none;
 		background-color: #00fff0;
 		box-shadow: 5px 5px black;
 		margin-top: 20px;
 		width: 100%;
-		height: 60px !important; 
+		height: 60px !important;
 		font-size: 15px;
 		font-weight: 600;
 		cursor: pointer;
@@ -339,14 +416,14 @@ footer {
 		font-size: 10px;
 	}
 
-  .landing-1 {
-    gap: 10px;
-  }
+	.landing-1 {
+		gap: 10px;
+	}
 
 	.landing-text-mobile {
-    text-align: center;
+		text-align: center;
 		margin: 20px 20px;
-    gap: 10px;
+		gap: 10px;
 	}
 
 	.landing-text-mobile h3 {
@@ -361,15 +438,15 @@ footer {
 		font-size: 8px !important;
 	}
 
-  .btn-shop {
-    height: 40px !important;
-  }
+	.btn-shop {
+		height: 40px !important;
+	}
 }
 
 @media only screen and (max-width: 340px) {
-  .landing-1 img {
-    width: 100px;
-  }
+	.landing-1 img {
+		width: 100px;
+	}
 
 	.landing-text-mobile h3 {
 		font-size: 7px !important;
@@ -383,7 +460,7 @@ footer {
 		font-size: 6px !important;
 	}
 
-  .btn-shop {
-    height: 30px !important;
-  }
+	.btn-shop {
+		height: 30px !important;
+	}
 }
