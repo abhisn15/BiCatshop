@@ -79,7 +79,7 @@ span {
 .landing-1 {
 	background-image: url("img/bg.png");
 	background-size: cover;
-	height: 100dvh;
+	height: 100vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -336,10 +336,11 @@ footer {
 		z-index: 1;
 		filter: blur(20px);
 		left: 20%;
+		top: 40%;
 	}
 	.bubble-3 {
 		position: absolute;
-		bottom: 20%;
+		bottom: 2%;
 		filter: blur(20px);
 		z-index: 1;
 	}
