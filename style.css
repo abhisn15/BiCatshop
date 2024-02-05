@@ -40,6 +40,7 @@ nav ul li a {
 	color: #00fff0;
 	font-size: 20px;
 	position: relative;
+	text-shadow: 2px 2px black;
 }
 
 nav ul li a::before {
@@ -214,7 +215,7 @@ span {
 
 .product {
 	font-size: 40px;
-	margin-bottom: 80px;
+	padding-top: 100px;
 }
 
 .card-table {
@@ -239,9 +240,6 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	width: 100%;
-	position: absolute;
-	bottom: 0;
 	gap: 20px;
 	text-align: center;
 	z-index: 100;
@@ -323,6 +321,10 @@ footer {
 	display: block;
 }
 
+.card-table-mobile {
+	display: none;
+}
+
 @keyframes mengambang {
 	0%,
 	100% {
@@ -331,6 +333,102 @@ footer {
 	50% {
 		transform: translateY(-5%);
 	}
+}
+
+footer {
+	padding: 20px;
+}
+
+#copyright {
+	color: black;
+}
+
+.social {
+	color: black;
+}
+
+.social a {
+	color: black;
+}
+
+.landing-4 {
+	background-image: url("./img/desktop/bg4.png");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 100px;
+	gap: 40px;
+}
+
+.contact {
+	text-align: center;
+	font-size: 40px;
+}
+
+.card-contact {
+	margin: 40px 15px;
+	width: 660px;
+	border-radius: 20px;
+	box-shadow: 10px 10px black;
+	background-color: white;
+}
+
+.card-contact label {
+	font-size: 30px;
+	margin: 10px;
+	color: black;
+}
+
+.card-contact form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 40px 30px;
+}
+
+.card-contact form input {
+	padding: 10px 20px;
+	border-radius: 20px;
+	height: 50px;
+}
+
+.card-contact form textarea {
+	height: 200px;
+	padding: 10px 20px;
+}
+
+.submit .submit {
+	border: none;
+	background-color: white;
+	padding: 5px 40px !important;
+	transform: scale(1);
+	transition: all 1s;
+	box-shadow: 5px 4px black;
+}
+
+.submit .submit:hover {
+	border: none;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	cursor: pointer;
+	padding: 5px 50px !important;
+	transform: scale(1);
+	transition: all 1s;
+	box-shadow: 5px 4px rgb(95, 103, 255);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ffffff;
+	border: 1px solid black;
+	border-radius: 50px;
+	box-shadow: 0px 2px 20px black;
+}
+
+::-webkit-scrollbar {
+	border-radius: 50px;
+	background-color: #00fff0;
 }
 
 @media only screen and (max-width: 1302px) {
@@ -435,7 +533,9 @@ footer {
 	.landing-1 {
 		background-image: url("img/mobile/bg.png");
 		background-size: cover;
+		background-position: center;
 		flex-direction: column-reverse;
+		height: 100dvh;
 		gap: 40px;
 	}
 
@@ -443,6 +543,10 @@ footer {
 		position: relative;
 		z-index: 10;
 		width: 250px;
+	}
+
+	.card-contact {
+		width: 460px;
 	}
 
 	.bubble-1 {
@@ -500,6 +604,10 @@ footer {
 		right: 56px;
 	}
 
+	.navbar-normal {
+		animation: navbar 1s ease-in-out;
+	}
+
 	.btn-group {
 		display: flex;
 		justify-content: center;
@@ -527,7 +635,128 @@ footer {
 	}
 
 	.hidden {
-		display: none !important;
+		transform: translateY(-100%);
+		animation: navbar-reverse 1s ease-in-out !important;
+	}
+
+	.landing-2 {
+		background-image: url("./img/mobile/bg2.png");
+		padding-top: 200px;
+		background-size: cover;
+	}
+
+	.img-about {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.about {
+		padding-bottom: 20px;
+	}
+
+	.cat-about {
+		width: 200px;
+		height: 200px;
+	}
+
+	.food {
+		position: relative;
+		left: 60px;
+		width: 100px;
+		top: -40px;
+	}
+
+	.shampo {
+		position: relative;
+		top: 50px;
+		width: 80px;
+		right: 40px;
+	}
+
+	.about-desk {
+		text-align: center;
+		width: 90%;
+		font-size: 14px;
+	}
+
+	.landing-3 {
+		padding-top: 200px;
+		height: auto;
+	}
+
+	.card-table-mobile {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+
+	.card-mobile {
+		box-shadow: 10px 5px black;
+		padding: 10px 20px;
+		display: flex;
+		gap: 5px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #ffffff;
+		width: 300px;
+		width: 300px;
+		border-radius: 20px;
+	}
+
+	.card-mobile button {
+		margin: 20px;
+		cursor: pointer;
+		border: none;
+		padding: 5px 25px;
+		border-radius: 20px;
+		box-shadow: 2px 2px black;
+		transform: scale(1);
+		transition: all 1s;
+	}
+
+	.card-mobile button:hover {
+		margin: 20px;
+		cursor: pointer;
+		border: none;
+		padding: 5px 25px;
+		border-radius: 20px;
+		background-color: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
+		box-shadow: 2px 2px rgb(239, 21, 255);
+		transform: scale(1.05);
+		transition: all 1s;
+	}
+
+	.card-mobile img {
+		width: 200px;
+	}
+
+	.card-table {
+		display: none;
+	}
+
+	@keyframes navbar {
+		from {
+			transform: translateY(-100%);
+		}
+		to {
+			transform: translateY(0%);
+		}
+	}
+
+	@keyframes navbar-reverse {
+		from {
+			transform: translateY(0%);
+		}
+		to {
+			transform: translateY(-100%);
+		}
 	}
 }
 
@@ -559,8 +788,11 @@ footer {
 	footer {
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 10px;
 		font-size: 10px;
+	}
+
+	.card-contact {
+	width: 360px;
 	}
 
 	.landing-1 {
@@ -595,6 +827,10 @@ footer {
 		width: 100px;
 	}
 
+	.card-contact {
+	width: 300px;
+	}
+
 	.landing-text-mobile h3 {
 		font-size: 7px !important;
 	}
@@ -609,5 +845,21 @@ footer {
 
 	.btn-shop {
 		height: 30px !important;
+	}
+
+	.about {
+		font-size: 30px;
+		margin-top: 200px;
+	}
+
+	.product {
+		font-size: 30px;
+		padding-top: 60px;
+		margin-bottom: 40px !important;
+		margin: 0;
+	}
+
+	.landing-3 {
+		padding-top: 400px;
 	}
 }
