@@ -532,7 +532,6 @@ footer {
 
 	.landing-1 {
 		background-image: url("img/mobile/bg.png");
-		background-size: cover;
 		background-position: center;
 		flex-direction: column-reverse;
 		height: 100dvh;
@@ -641,6 +640,7 @@ footer {
 
 	.landing-2 {
 		background-image: url("./img/mobile/bg2.png");
+		height: 100dvh;
 		padding-top: 200px;
 		background-size: cover;
 	}
