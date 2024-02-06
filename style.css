@@ -792,7 +792,7 @@ footer {
 	}
 
 	.card-contact {
-	width: 360px;
+		width: 350px;
 	}
 
 	.landing-1 {
@@ -828,7 +828,19 @@ footer {
 	}
 
 	.card-contact {
-	width: 300px;
+		width: 280px;
+	}
+
+	.card-contact label {
+		font-size: 14px;
+	}
+
+	.card-contact input {
+		font-size: 14px;
+	}
+
+	.submit {
+		font-size: 14px;
 	}
 
 	.landing-text-mobile h3 {
